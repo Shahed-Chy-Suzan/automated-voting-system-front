@@ -83,12 +83,12 @@ export default {
         },
         {
           icon: 'mdi-apps',
-          title: 'voter',
+          title: 'Voter',
           to: '/admin/voters'
         },
         {
           icon: 'mdi-apps',
-          title: 'votes',
+          title: 'Vote',
           to: '/admin/votes'
         },
         // {

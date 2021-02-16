@@ -72,7 +72,7 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-bus',
+          icon: 'mdi-apps',
           title: 'Position',
           to: '/admin/positions'
         },

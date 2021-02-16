@@ -31,6 +31,7 @@
                         label="Candidate name"
                         outlined
                         hide-details="auto"
+                        required
                       ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="12">
@@ -43,6 +44,7 @@
                         outlined
                         hide-details="auto"
                         label="Position"
+                        required
                       />
                     </v-col>
                     <v-col cols="12" md="6">
@@ -51,6 +53,7 @@
                         label="Age"
                         outlined
                         hide-details="auto"
+                        required
                       ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6">

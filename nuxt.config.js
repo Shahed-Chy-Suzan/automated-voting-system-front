@@ -49,7 +49,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: "http://automated-voting-system-back.test/api/"
+    baseURL: "http://localhost:8000/api/"
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

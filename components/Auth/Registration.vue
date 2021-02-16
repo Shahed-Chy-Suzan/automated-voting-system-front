@@ -39,22 +39,12 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="6">
+            <v-col cols="12">
               <v-text-field
                 v-model="nid"
                 outlined
                 color="secondary"
                 label="Voter NID Number"
-                hide-details="auto"
-                required
-              />
-            </v-col>
-            <v-col cols="6">
-              <v-text-field
-                v-model="user_name"
-                outlined
-                color="secondary"
-                label="User Name"
                 hide-details="auto"
                 required
               />
@@ -98,7 +88,7 @@
         <v-btn
           color="primary"
           :loading="isLoading"
-          @click="login()"
+          @click="registration()"
         >Sign up
         </v-btn>
       </v-card-actions>
@@ -160,12 +150,11 @@ export default {
   },
 
   computed: {
-    loginInfo () {
+    voterInfo () {
       return {
         voter_name: this.voter_name,
         age: this.age,
         nid: this.nid,
-        user_name: this.user_name,
         finger_print_id: this.finger_print_id,
       }
     }
@@ -187,7 +176,7 @@ export default {
     //   }
     // },
 
-    login () {
+    registration () {
       this.isLoading = true
       if (!this.$refs.form.validate()) {
         this.errorMessage = 'Please input valid data'
@@ -197,8 +186,8 @@ export default {
       } else {
         this.resetValidation()
 
-        // this.$store.dispatch('auth/signup', this.loginInfo)
-        this.$axios.post('/auth/signup',this.loginInfo)
+        // this.$store.dispatch('auth/signup', this.voterInfo)
+        this.$axios.post('/voter',this.voterInfo)
           .then((response) => {
             User.responseAfterLogin(response)
             this.$toast.success("Registration Successful!");
@@ -212,8 +201,8 @@ export default {
             this.snackbar = true
             // eslint-disable-next-line no-console
             // console.log(error)
-            // console.log(error.response.data.errors)
-            // this.$toast.error("error.response.data.errors");
+            console.log(error.response.data.errors)
+            this.$toast.error("error.response.data.errors");
           })
           .finally(() => {
             this.isLoading = false

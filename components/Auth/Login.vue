@@ -25,10 +25,10 @@
             </v-col>
             <v-col cols="12">
               <v-text-field
-                v-model="finger_print_id"
+                v-model="password"
                 outlined
                 color="secondary"
-                label="Finger Print Id"
+                label="Password"
                 hide-details="auto"
                 required
                 prepend-icon="mdi-lock"
@@ -86,7 +86,7 @@ export default {
     isLoading: false,
     valid: true,
     user_name: "",
-    finger_print_id: "",
+    password: "",
     userNameRules: [v => !!v || "User Name is required"],
 
     // fingerPrintRules: [v => !!v || "Finger Print Id is required"],
@@ -103,8 +103,8 @@ export default {
     // }),
     loginInfo() {
       return {
-        user_name: this.user_name,
-        finger_print_id: this.finger_print_id
+        username: this.user_name,
+        password: this.password
       };
     }
   },

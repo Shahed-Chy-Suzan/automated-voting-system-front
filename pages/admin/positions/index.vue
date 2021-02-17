@@ -155,6 +155,7 @@ export default {
         .get("position")
         .then(response => {
           this.positions = response.data;
+          console.log(response.data)
         })
         .catch(error => {
           this.$toast.error(error.response.data.message);

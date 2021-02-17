@@ -206,7 +206,7 @@ export default {
   methods: {
     initialize() {
       this.$axios
-        .get("voter")
+        .get("/voter")
         .then(response => {
           this.voters = response.data;
         })

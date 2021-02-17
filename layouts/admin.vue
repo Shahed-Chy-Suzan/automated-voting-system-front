@@ -72,35 +72,35 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-bus',
-          title: 'Bus',
-          to: '/bus'
+          icon: 'mdi-apps',
+          title: 'Position',
+          to: '/admin/positions'
         },
         {
           icon: 'mdi-account',
-          title: 'Driver',
-          to: '/driver'
+          title: 'Candidate',
+          to: '/admin/candidates'
         },
         {
           icon: 'mdi-apps',
-          title: 'Assign Bus-Driver',
-          to: '/bus-driver'
+          title: 'Voter',
+          to: '/admin/voters'
         },
         {
           icon: 'mdi-apps',
-          title: 'Bus Driver Log',
-          to: '/bus-driver-log'
+          title: 'Vote',
+          to: '/admin/votes'
         },
         // {
         //   icon: 'mdi-apps',
         //   title: 'Bus Service Log',
         //   to: '/bus-service-log'
         // },
-        {
-          icon: 'mdi-bell-ring',
-          title: 'Notification',
-          to: '/notification'
-        },
+        // {
+        //   icon: 'mdi-bell-ring',
+        //   title: 'Notification',
+        //   to: '/notification'
+        // },
       ],
       miniVariant: false,
       right: true,

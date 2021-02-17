@@ -49,12 +49,12 @@
         hide-default-footer
       >
         <template v-slot:item.actions="{ item }">
-          <v-btn small color="success" class="mr-2">
+          <v-chip small color="success" class="mr-2" label>
             Yes
-          </v-btn>
-          <v-btn color="red" class="white--text" small>
+          </v-chip>
+          <v-chip color="red" class="white--text" label small>
             No
-          </v-btn>
+          </v-chip>
         </template>
         
         <template v-slot:no-data>
@@ -93,7 +93,7 @@ import User from "@/static/helpers/User.js";
         votingDialog: false,
         positions: [],
         headers: [
-          { text: "Icon", value: "iocn" },
+          // { text: "Icon", value: "iocn" },
           {
             text: "Candidate Name",
             align: "start",

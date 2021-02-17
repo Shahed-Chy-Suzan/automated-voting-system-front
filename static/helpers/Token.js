@@ -2,7 +2,7 @@ class Token{
     isValid(token){
         const payload = this.payload(token);
         if (payload) {                         //iss mane issu_date bojai
-            return payload.iss == "http://localhost:8000/api/auth/login"  || "http://localhost:8000/api/voter" ? true: false
+            return payload.iss == "http://automated-voting-system-back.test/api/auth/login"  || "http://automated-voting-system-back.test/api/voter" ? true : false
         }
         return false
     }

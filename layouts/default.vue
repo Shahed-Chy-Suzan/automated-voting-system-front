@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
    
-    <v-app-bar :clipped-left="clipped" fixed app flat>
+    <v-app-bar fixed app flat>
       <v-toolbar-title v-text="title" />
       <v-spacer />
         <v-btn
@@ -20,9 +20,6 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
